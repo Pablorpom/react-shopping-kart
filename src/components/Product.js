@@ -1,4 +1,3 @@
-import turboImage from '../images/turbo.jpeg'
 import getFormattedPrice from '../utils/getFormattedPrice'
 import PropTypes from 'prop-types';
 import { shape as productShape } from '../prop-types/product';
@@ -10,7 +9,7 @@ const Product = (props)=>{
         <div className="product">
             <h3>{props.brand}</h3>
             <h2>{props.name}</h2>
-            <img src={turboImage} alt={props.name}/>
+            <img src={props.photos[0]} alt={props.name}/>
             <p>{props.description}</p>
             <h3>{getFormattedPrice.format(props.price)}</h3>
             <button className="add-button" onClick={onClick}>Add to kart</button>
