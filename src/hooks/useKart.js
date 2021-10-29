@@ -1,7 +1,8 @@
-import { useState } from "react";
+import useLocalStorage from "use-local-storage";
+
 
 const useKart = (initialState = [])=> {
-    const [kart, setKart] = useState(initialState);
+    const [kart, setKart] = useLocalStorage('kart',initialState);
     const addItem = (id)=> {
         const index = kart.indexOf(id);
         if(index === -1){

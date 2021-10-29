@@ -8,8 +8,8 @@ import mapByProperty from './utils/mapByProperty';
 
 function App(props) { // props es un objeto y cuando se crea un prop es una propiedad del objeto
   const [kart, addItem, removeItem] = useKart();
-  const productsById = mapByProperty(props.data, 'id')
-  const kartItems = kart.map((id)=> productsById[id])
+  const productsById = mapByProperty(props.data, 'id');
+  const kartItems = kart.map((id)=> productsById[id]);
   return (
     <div className="App">
       <ProductsGrid data={props.data} onAddItem={addItem}/>
